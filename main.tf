@@ -23,6 +23,10 @@ resource "random_id" "uniq" {
   byte_length = 4
 }
 
+provider "azurerm" {
+  features {}
+}
+
 resource "azurerm_resource_group" "lacework" {
   name     = local.resource_group_name
   location = local.resource_group_location
