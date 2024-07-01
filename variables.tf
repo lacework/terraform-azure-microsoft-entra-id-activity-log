@@ -1,7 +1,3 @@
-variable "eventhub_namespace_name" {
-  type        = string
-  description = "The name of the Event Hub namespace."
-}
 variable "eventhub_name" {
   type        = string
   description = "The name of the Event Hub."
@@ -33,10 +29,9 @@ variable "diagnostic_settings_name" {
 }
 variable "lacework_integration_name" {
   type        = string
-  default     = "TF activity log"
+  default     = "TF Entra ID activity log"
   description = "The Lacework integration name"
 }
-# Note: the location does not need to be specified when using an existing resource group
 variable "location" {
   type        = string
   default     = "West US 2"
@@ -60,11 +55,6 @@ variable "service_principal_id" {
   default     = ""
   description = "The Enterprise App Object ID related to the application_id (required when use_existing_ad_application is true)"
 }
-variable "eventhub_resource_group" {
-  type        = string
-  default     = ""
-  description = "The Resource Group for the Event Hub"
-}
 variable "tags" {
   type        = map(string)
   default     = {}
@@ -74,16 +64,6 @@ variable "use_existing_ad_application" {
   type        = bool
   default     = false
   description = "Set this to `true` to use an existing Active Directory Application"
-}
-variable "use_existing_eventhub_namespace" {
-  type        = bool
-  default     = false
-  description = "Set this to `true` to use an existing Event Hub Namespace. Default behavior creates a new Event Hub Namespace"
-}
-variable "use_existing_resource_group" {
-  type        = bool
-  default     = false
-  description = "Set this to `true` to use an existing Resource Group. Default behavior creates a new Resource Group"
 }
 variable "wait_time" {
   type        = string
