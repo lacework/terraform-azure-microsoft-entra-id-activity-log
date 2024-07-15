@@ -1,7 +1,3 @@
-variable "eventhub_name" {
-  type        = string
-  description = "The name of the Event Hub."
-}
 variable "num_partitions" {
   type        = number
   default     = 1

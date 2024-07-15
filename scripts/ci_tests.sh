@@ -6,7 +6,7 @@
 #
 set -eou pipefail
 
-readonly project_name=terraform-<PROVIDER>-<NAME>
+readonly project_name=terraform-azure-microsoft-entra-id-activity-log
 
 TEST_CASES=(
   examples/default
