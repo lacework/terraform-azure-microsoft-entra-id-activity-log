@@ -1,11 +1,12 @@
 <a href="https://lacework.com"><img src="https://techally-content.s3-us-west-1.amazonaws.com/public-content/lacework_logo_full.png" width="600"></a>
 
-# terraform-<PROVIDER>-<NAME>
+# terraform-azure-microsoft-entra-id-activity-log
 
-[![GitHub release](https://img.shields.io/github/release/lacework/terraform-<PROVIDER>-<NAME>.svg)](https://github.com/lacework/terraform-<PROVIDER>-<NAME>/releases/)
+[![GitHub release](https://img.shields.io/github/release/lacework/terraform-azure-microsoft-entra-id-activity-log.svg)](https://github.com/lacework/terraform-azure-microsoft-entra-id-activity-log/releases/)
 [![Codefresh build status]( https://g.codefresh.io/api/badges/pipeline/lacework/terraform-modules%2Ftest-compatibility?type=cf-1&key=eyJhbGciOiJIUzI1NiJ9.NWVmNTAxOGU4Y2FjOGQzYTkxYjg3ZDEx.RJ3DEzWmBXrJX7m38iExJ_ntGv4_Ip8VTa-an8gBwBo)]( https://g.codefresh.io/pipelines/edit/new/builds?id=607e25e6728f5a6fba30431b&pipeline=test-compatibility&projects=terraform-modules&projectId=607db54b728f5a5f8930405d)
 
-A Terraform Module to __________________________ with Lacework.
+A Terraform Module to configure a Lacework integration with Azure Event Hub for Entra ID audit log analysis. It configures a Diagnostic Setting that routes these logs to the event hub, from which Lacework reads them.
+
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
