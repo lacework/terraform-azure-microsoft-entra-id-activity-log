@@ -53,7 +53,6 @@ A Terraform Module to configure a Lacework integration with Azure Event Hub for 
 | <a name="input_application_name"></a> [application\_name](#input\_application\_name) | The name of the Azure Active Directory Application (required when use\_existing\_ad\_application is set to true) | `string` | `"lw_security_audit"` | no |
 | <a name="input_application_password"></a> [application\_password](#input\_application\_password) | The Active Directory Application password to use (required when use\_existing\_ad\_application is set to true) | `string` | `""` | no |
 | <a name="input_diagnostic_settings_name"></a> [diagnostic\_settings\_name](#input\_diagnostic\_settings\_name) | The name of the subscription's Diagnostic Setting for Activity Logs (required when use\_existing\_diagnostic\_settings is set to true) | `string` | `"active-directory-activity-logs"` | no |
-| <a name="input_eventhub_name"></a> [eventhub\_name](#input\_eventhub\_name) | The name of the Event Hub. | `string` | n/a | yes |
 | <a name="input_lacework_integration_name"></a> [lacework\_integration\_name](#input\_lacework\_integration\_name) | The Lacework integration name | `string` | `"TF Entra ID activity log"` | no |
 | <a name="input_location"></a> [location](#input\_location) | Azure region where the Event Hub will reside. | `string` | `"West US 2"` | no |
 | <a name="input_log_retention_days"></a> [log\_retention\_days](#input\_log\_retention\_days) | Specifies the number of days that logs will be retained. | `number` | `7` | no |
