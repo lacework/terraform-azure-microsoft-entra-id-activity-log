@@ -1,9 +1,16 @@
 terraform {
-  required_version = ">= 0.12.26"
-
   required_providers {
     lacework = {
-      source = "lacework/lacework"
+      source  = "lacework/lacework"
+      version = "~> 1.6"
+    }
+    azuread = {
+      source  = "hashicorp/azuread"
+      version = "~> 2.25"
+    }
+    azurerm = {
+      source = "hashicorp/azurerm"
+      version = "~> 3.45"
     }
   }
 }
