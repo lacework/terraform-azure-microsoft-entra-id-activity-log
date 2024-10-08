@@ -1,3 +1,8 @@
+# v0.2.1
+
+## Other Changes
+* ci: version bump to v0.2.1-dev (Lacework)([ad3cbdf](https://github.com/lacework/terraform-azure-microsoft-entra-id-activity-log/commit/ad3cbdf0329beab3bb68686b15c5414ca42e041d))
+---
 # v0.2.0
 
 ## Features
@@ -26,4 +31,3 @@
 * ci: sign lacework-releng commits (#4) (Salim Afiune)([7a5d2bd](https://github.com/lacework/terraform-azure-microsoft-entra-id-activity-log/commit/7a5d2bd2b5468d6d6e1537bcbdfa0cbbefded641))
 * ci: fix finding major versions during release (#2) (Salim Afiune)([72197f2](https://github.com/lacework/terraform-azure-microsoft-entra-id-activity-log/commit/72197f2f20bf5d67710a2bc2d38d4844427e6d77))
 ---
-
