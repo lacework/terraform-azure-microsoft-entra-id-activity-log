@@ -12,12 +12,11 @@ provider "azurerm" {
 # main.tf
 module "az_ad_application" {
   source  = "lacework/ad-application/azure"
-  version = "~> 1.3.0"
+  version = "~> 2.0"
 }
 
 module "microsoft-entra-id-activity-log" {
-  source = "lacework/microsoft-entra-id-activity-log/azure"
-  version = "~> 0.2.0"
+  source = "../../"
   use_existing_ad_application = true
 
   application_id              = module.az_ad_application.application_id

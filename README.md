@@ -28,7 +28,7 @@ A Terraform Module to configure a Lacework integration with Azure Event Hub for 
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_az_ad_application"></a> [az\_ad\_application](#module\_az\_ad\_application) | lacework/ad-application/azure | ~> 1.0 |
+| <a name="module_az_ad_application"></a> [az\_ad\_application](#module\_az\_ad\_application) | lacework/ad-application/azure | ~> 2.0 |
 
 ## Resources
 
