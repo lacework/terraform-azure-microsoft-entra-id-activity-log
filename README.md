@@ -13,14 +13,14 @@ A Terraform Module to configure a Lacework integration with Azure Event Hub for 
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 0.12.31 |
-| <a name="requirement_lacework"></a> [lacework](#requirement\_lacework) | ~> 1.0 |
+| <a name="requirement_lacework"></a> [lacework](#requirement\_lacework) | ~> 2.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
 | <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | n/a |
-| <a name="provider_lacework"></a> [lacework](#provider\_lacework) | ~> 1.0 |
+| <a name="provider_lacework"></a> [lacework](#provider\_lacework) | ~> 2.0 |
 | <a name="provider_random"></a> [random](#provider\_random) | n/a |
 | <a name="provider_time"></a> [time](#provider\_time) | n/a |
 
