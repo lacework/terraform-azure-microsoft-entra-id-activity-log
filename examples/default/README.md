@@ -38,7 +38,7 @@ module "az_ad_application" {
   version = "~> 1.3.0"
 }
 
-module "microsoft-entra-id-activity-log" {
+module "az_entra_id_activity_log" {
   source = "lacework/microsoft-entra-id-activity-log/azure"
   version = "~> 0.2.0"
   use_existing_ad_application = true

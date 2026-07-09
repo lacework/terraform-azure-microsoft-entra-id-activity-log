@@ -15,7 +15,7 @@ module "az_ad_application" {
   version = "~> 2.0"
 }
 
-module "microsoft-entra-id-activity-log" {
+module "az_entra_id_activity_log" {
   source = "../../"
   use_existing_ad_application = true
 
