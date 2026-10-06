@@ -35,3 +35,7 @@ output "integration_name" {
   value       = var.lacework_integration_name
   description = "The Lacework integration name"
 }
+output "lacework_integration_guid" {
+  value       = lacework_integration_azure_ad_al.default.intg_guid
+  description = "GUID of the created Lacework integration"
+}

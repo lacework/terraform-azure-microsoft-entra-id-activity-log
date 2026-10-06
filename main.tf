@@ -44,13 +44,10 @@ resource "azurerm_eventhub_namespace" "lacework" {
 }
 
 resource "azurerm_eventhub" "lacework" {
-  name                = local.eventhub_name
-  namespace_name      = local.eventhub_namespace_name
-  resource_group_name = local.resource_group_name
-  partition_count     = var.num_partitions
-  message_retention   = var.log_retention_days
-
-  depends_on = [azurerm_eventhub_namespace.lacework]
+  name              = local.eventhub_name
+  namespace_id      = azurerm_eventhub_namespace.lacework.id
+  partition_count   = var.num_partitions
+  message_retention = var.log_retention_days
 }
 
 resource "azurerm_role_assignment" "lacework" {
@@ -80,26 +77,18 @@ resource "azurerm_monitor_aad_diagnostic_setting" "entra_id_activity_logs" {
 
   enabled_log {
     category = "AuditLogs"
-    retention_policy {
-    }
   }
 
   enabled_log {
     category = "SignInLogs"
-    retention_policy {
-    }
   }
 
   enabled_log {
     category = "NonInteractiveUserSignInLogs"
-    retention_policy {
-    }
   }
 
   enabled_log {
     category = "ServicePrincipalSignInLogs"
-    retention_policy {
-    }
   }
 
   depends_on = [azurerm_eventhub.lacework]
