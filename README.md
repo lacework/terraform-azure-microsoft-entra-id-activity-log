@@ -7,21 +7,30 @@
 
 A Terraform Module to configure a Lacework integration with Azure Event Hub for Entra ID audit log analysis. It configures a Diagnostic Setting that routes these logs to the event hub, from which Lacework reads them.
 
+## Upgrading to v0.4
+
+v0.4 requires azurerm `~> 5.1`. The Event Hub now references its namespace by ID, and the Entra ID diagnostic setting no longer declares the `retention_policy` blocks azurerm 5 removed.
+
+1. Run `terraform init -upgrade`, then `terraform plan`, and review the plan before applying.
+2. azurerm 5.x no longer registers Resource Providers by default. Register `Microsoft.EventHub` and `microsoft.insights` in the subscription, or list them (exact casing) in the provider's `resource_providers_to_register`.
+
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 0.12.31 |
+| <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | ~> 5.1 |
 | <a name="requirement_lacework"></a> [lacework](#requirement\_lacework) | ~> 2.0 |
+| <a name="requirement_random"></a> [random](#requirement\_random) | >= 2.1 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | n/a |
+| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | ~> 5.1 |
 | <a name="provider_lacework"></a> [lacework](#provider\_lacework) | ~> 2.0 |
-| <a name="provider_random"></a> [random](#provider\_random) | n/a |
+| <a name="provider_random"></a> [random](#provider\_random) | >= 2.1 |
 | <a name="provider_time"></a> [time](#provider\_time) | n/a |
 
 ## Modules
@@ -73,6 +82,7 @@ A Terraform Module to configure a Lacework integration with Azure Event Hub for 
 | <a name="output_eventhub_name"></a> [eventhub\_name](#output\_eventhub\_name) | The name of the Event Hub for Activity Logs |
 | <a name="output_eventhub_namespace_name"></a> [eventhub\_namespace\_name](#output\_eventhub\_namespace\_name) | The name of the Event Hub Namespace for Activity Logs |
 | <a name="output_integration_name"></a> [integration\_name](#output\_integration\_name) | The Lacework integration name |
+| <a name="output_lacework_integration_guid"></a> [lacework\_integration\_guid](#output\_lacework\_integration\_guid) | GUID of the created Lacework integration |
 | <a name="output_resource_group_location"></a> [resource\_group\_location](#output\_resource\_group\_location) | The location of the resource group of the Event Hub for Activity Logs |
 | <a name="output_resource_group_name"></a> [resource\_group\_name](#output\_resource\_group\_name) | The resource group of the Event Hub for Activity Logs |
 | <a name="output_service_principal_id"></a> [service\_principal\_id](#output\_service\_principal\_id) | The Lacework Service Principal id |
